@@ -1,0 +1,496 @@
+.popup {
+    display: none; /* Standardmäßig versteckt */
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.popup button {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background: #27ae60;
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1500px; /* Maximale Breite für den gesamten Inhalt */
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    
+}
+
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 45px;
+    margin-bottom: 0px;
+}
+
+header h3 {
+    font-size: 25px;
+}
+
+.headlineButton {
+    display: flex;
+    justify-content: center; /* Zentriert den Button */
+    margin-bottom: 20px;
+}
+
+#headlineButton {
+    background-color: #2ecc71; /* Modernes Grün */
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px; /* Abgerundete Ecken */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
+}
+
+#headlineButton:hover {
+    background-color: #27ae60; /* Dunkleres Grün beim Hover */
+    transform: scale(1.05); /* Leichte Vergrößerung */
+}
+
+.aboutMe {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.meinAnsatz {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Flexbox sorgt dafür, dass der Text und das Bild nebeneinander sind */
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Verteilung von Bild und Text */
+    padding: 20px;
+}
+
+.section img {
+    width: 40%; /* Bild nimmt 50% der Breite ein */
+    max-width: 100%; /* Maximale Breite für das Bild */
+    max-height: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.section .text {
+    width: 50%; /* Text nimmt ebenfalls 50% der Breite ein */
+    padding: 20px;
+}
+
+/* Für kleinere Bildschirme (z.B. Handys) wird das Layout auf eine Spalte umgestellt */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column; /* Text und Bild untereinander anordnen */
+        text-align: center; /* Text wird zentriert */
+        padding: 20px; /* Weniger Padding für kleinere Bildschirme */
+    }
+
+    .section img {
+        width: 80%; /* Bild nimmt 80% der Breite ein */
+        margin-bottom: 20px; /* Abstand zwischen Bild und Text */
+    }
+
+    .section .text {
+        width: 100%; /* Text nimmt die ganze Breite ein */
+    }
+}
+
+/* Optionale Verbesserung: Bei sehr kleinen Bildschirmen (z.B. mobile Geräte im Hochformat) */
+@media (max-width: 480px) {
+    .section {
+        padding: 15px; /* Noch weniger Padding */
+    }
+
+    .section img {
+        width: 100%; /* Bild nimmt 100% der Breite ein */
+    }
+
+    .section .text {
+        width: 100%; /* Text nimmt ebenfalls 100% der Breite ein */
+    }
+}
+
+.section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Ungeordnete Liste ohne Standard-Punkte */
+.services-list {
+    list-style-type: none; /* Entfernt die standardmäßigen Aufzählungspunkte */
+    padding-left: 0; /* Entfernt die Standard-Einrückung */
+}
+
+.services-list li {
+    padding: 15px 0; /* Abstand zwischen den Listeneinträgen */
+    font-size: 18px;
+    margin-bottom: 20px; /* Abstand nach unten zu dem nächsten Text */
+}
+
+
+.services-list li::before {
+    content: "\f005"; /* Unicode für das Font Awesome Stern-Icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400; /* 400 für regulär, 900 für gefüllt */
+    color: #f1c40f; /* Schönes Gold-Gelb für den Stern */
+
+    margin-right: 10px; /* Abstand zum Text */
+    padding: 15px 0; /*Etwas Abstand zwischen den Einträgen */
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Entfernt den standardmäßigen Aufzählungspunkt */
+.coaching-list, .warum-list {
+    list-style-type: none; /* Entfernt die standardmäßigen Aufzählungspunkte */
+    padding-left: 0; /* Entfernt die Standard-Einrückung */
+}
+
+/* Fügt das FontAwesome-Sternsymbol als Aufzählungszeichen hinzu */
+.coaching-list li::before, .warum-list li::before {
+    content: "\f005"; /* Unicode für das Font Awesome Stern-Icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400; /* 900 für gefüllt */
+    color: #f1c40f; /* Schönes Gold-Gelb für den Stern */
+    margin-right: 10px; /* Abstand zum Text */
+    font-size: 18px;
+    margin-bottom: 20px; /* Abstand nach unten */
+}
+
+/* Pseudo-Elemente für individuelle Aufzählungspunkte */
+.seminar::before, .coaching::before {
+    content: '•';  /* Der Aufzählungspunkt */
+    color: #000000; /* Grüner Farbton für den Aufzählungspunkt */
+    font-size: 30px; /* Größe des Aufzählungspunkts */
+    margin-right: 10px; /* Abstand zum Text */
+    vertical-align: middle; /* Vertikale Ausrichtung */
+}
+
+
+
+/* Flexbox Container für Buttons */
+.button-container {
+    display: flex;
+    justify-content: center; /* Zentriert den Button */
+    margin-top: 30px; /* Abstand zum Text */
+}
+
+/* Button-Stile */
+button {
+    
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#button-main:hover {
+    background-color: #9b9b9b;
+    transform: scale(1.05);
+}
+
+/* Haupt-Button */
+#button-main {
+    margin-left: 0; /* Kein Abstand nach links */
+    background-color: #2ecc71; /* Grüner Button */
+}
+
+/* Zweiter Button */
+#button-sub {
+    background-color: rgb(221, 221, 55); /* Blau */
+}
+
+#button-sub:hover {
+    background-color: #9b9b9b;
+    transform: scale(1.05);
+}
+
+/* Flexbox für die gesamte Section */
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Verteilung von Bild und Text */
+    padding: 50px;
+}
+
+
+/* Kontakt Section */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #e6e6e6;
+}
+
+.contact-section-kontakt {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.contact-info {
+    width: 40%; /* Kontaktdaten nehmen 40% der Breite */
+    padding-right: 30px;
+}
+
+.contact-info h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contactHeadlineText {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contact-info {
+        width: 100%;
+        order: 2;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .contact-form {
+        width: 100%;
+        order: 2;
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+
+
+/* Kontaktformular */
+.contact-form {
+    width: 55%; /* Formular nimmt 55% der Breite */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+}
+
+.contact-form button:hover {
+    background-color: #9b9b9b;
+    transform: scale(1.1);
+}
+
+/* Responsive Anpassung */
+@media (max-width: 768px) {
+    .section {
+        display: flex;
+        flex-direction: column-reverse; /* Damit Bild unter den Text rutscht */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .section img {
+        width: 100%;
+        margin: 20px 0 0 0;
+    }
+
+    .section .text {
+        width: 100%;
+    }
+
+    .section:nth-child(even) {
+        flex-direction: column-reverse; /* auch bei even Sections */
+    }
+}
+
+footer {
+    background: #585755;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+footer a:hover {
+    color: #2ecc71;
+}
+
+.green-line {
+    border: none;
+    height: 2px; /* Dicke der Linie */
+    background-color: #2ecc71; /* Schönes Grün */
+    margin: 30px 0; /* Abstand ober- und unterhalb */
+    width: 60%; /* Breite der Linie */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#datenschutzImpressum {
+    padding: 30px;
+}
+
+/* Neue Navigation für Responsive Design */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #2ecc71;
+}
+
+/* Menü-Toggle Button (Hamburger) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}

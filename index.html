@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Kastenhofer | Zielorientierung</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<div id="cookiePopup" class="popup">
+    <div class="popup-content">
+        <p>Diese Website verwendet Cookies, um die beste Erfahrung zu bieten.</p>
+        <button onclick="acceptCookies()">Akzeptieren</button>
+    </div>
+</div>
+
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="coaching.html">Coaching</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Zielorientierung</h1>
+        <h3>Finde deinen inneren Leuchtturm</h3>
+        <p id="name">Nicolas Kastenhofer | Lebens- und Sozialberater in Ausbildung unter Supervision</p>
+    </header>
+
+    <div class="headlineButton">
+        <button id="headlineButton" onclick="window.open('https://cal.com/nicolas-kastenhofer-zfc4aq/secret', '_blank')">Jetzt kostenloses
+            Erstgespräch vereinbaren</button>
+    </div>
+    <br>
+    <div class="section" id="firstText">
+        <img src="img/bild1.jpg" alt="Bild 1">
+        <div class="text">
+            <h2>Klarheit, Ziele & Orientierung für dein Leben</h2>
+            <p>Du spürst, dass mehr in dir steckt - aber dir fehlt eine klare Richtung? <br>
+                Vielleicht hast du Träume und Ambitionen, aber du kommst nicht ins Handeln? <br>
+                Oder du hast bereits erste Schritte gemacht, doch der langfristige Plan fehlt? <br><br>
+                <i class="fa-solid fa-right-long"></i> <b>Dann bist du hier genau richtig.</b> <br><br>
+                Ich helfe Menschen, ihren <b>inneren Leuchtturm</b> zu finden - ihre eigene Richtung, ihr Ziel,
+                ihren Weg.
+            </p>
+        </div>
+    </div>
+    <div class="section" id="secondText">
+        <img src="img/bild2q.jpg" alt="Bild 1">
+        <div class="text">
+            <h2>Für wen ist das Coaching gedacht?</h2>
+            <p>
+                Mein Coaching richtet sich an <b>Männer & Frauen zwischen 18 und 40 Jahren</b>, die bereits im
+                Berufsleben stehen oder eine Ausbildung machen. <br><br>
+                Diese Menschen suchen keine Bevormundung, sondern <b>Klarheit, Struktur und Umsetzungsstrategien</b>, um
+                eigenständig Fortschritte zu machen. Sie sind bereit, für ihren eigenen Erfolg Verantwortung zu
+                übernehmen und wollen lernen, sich selbst besser zu führen. <br><br>
+                <i class="fa-solid fa-right-long"></i> <b>Wenn du bereit bist, deine Ziele zu definieren und aktiv an
+                    deiner Zukunft zu arbeiten, dann
+                    lass uns starten.</b>
+            </p>
+        </div>
+    </div>
+    <div class="section" id="thirdText">
+        <img src="img/bild3.jpg" alt="Bild 1">
+        <div class="text">
+            <h2>Lass uns loslegen</h2>
+            <ul class="services-list">
+                <li class="seminar">
+                    <b>Kostenloses Webinar</b> - Melde dich hier für das nächste Event an!
+                    <div class="button-container">
+                        <button id="button-main" onclick="window.open('https://cal.com/nicolas-kastenhofer-zfc4aq/webinar', '_blank')">Termin
+                            buchen</button>
+                    </div>
+                </li>
+                <li class="coaching">
+                    <b>1:1 Coaching</b> - Schreib mir eine Nachricht für ein erstes Ziel-Orientierungsgespräch.
+                    <div class="button-container">
+                        <button id="button-sub" onclick="window.open('https://cal.com/nicolas-kastenhofer-zfc4aq/secret', '_blank')">Termin
+                            buchen</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Kontakt Section -->
+    <div class="section contact-section">
+        <div class="contact-info">
+            <h2>Kontakt</h2>
+            <p><b>Name:</b> Nicolas Kastenhofer</p>
+            <p><b>Adresse:</b> Grasbach 27, 4211 Alberndorf</p>
+            <p><b>Telefon:</b> +43 681 20463550</p>
+
+        </div>
+
+        <div class="contact-form">
+            <h2>Schreibe mir eine Nachricht</h2>
+            <form action="mailto:nicolas.k.zielorientierung@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Nachricht:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Nachricht senden</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+    </footer>
+
+    <script src="cookie.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
